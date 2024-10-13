@@ -119,7 +119,7 @@ Do these exercises after viewing the first two sections of the training video:  
 
 2. Make a directory called, ``backups``, and a sub-directory in it called, ``temp``. Use the ``SET`` statement to desync a different node. Execute a ``SHOW STATUS`` statement to check that the node has a status of *Desync*. Execute ``SHOW VARIABLES`` to determine the data directory. Next, use ``rsync`` to back-up of all of the database to the ``temp`` sub-directory, in the ``backups`` directory. When it’s finished, use ``tar`` to create a zipped archive file (e.g., ``db-backup.tgz``). Disable desync on the node.
 
-3. On one of the Galera nodes, use the ``DROP DATABASE`` statement to drop the ``company`` database. Check to see that it’s replicated on the other two nodes. Now shutdown all of the nodes. When they’ve all stopped, use the back-up file to restore the data directory on the node where it’s located. Then start that node and check if the ``company`` database is back. After that, start the other two nodes.  Give them a couple of minutes before checking that the ``company`` database has been restored on them.
+3. On one of the Galera nodes, use the ``DROP DATABASE`` statement to drop the ``company`` database. Check to see that it’s replicated on the other two nodes. Now shutdown all of the nodes. When they’ve all stopped, use the back-up file to restore the data directory on the node where it’s located. Then start that node and check if the ``company`` database is back. After that, start the other two nodes. Give them a couple of minutes before checking that the ``company`` database has been restored on them.
 
 .. rst-class:: sub-heading
 .. rubric:: Using Standard Replication
